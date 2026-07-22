@@ -1,0 +1,392 @@
+/* ===========================
+   TOOP PODCAST WEBSITE
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+}
+
+/* ===========================
+NAVIGATION
+=========================== */
+
+nav{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+}
+
+.logo img{
+    width:75px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    color:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#d4af37;
+}
+
+/* ===========================
+HERO
+=========================== */
+
+.hero{
+    .hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding-top:120px;
+    box-sizing:border-box;
+}
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.65);
+}
+
+.hero-content{
+    position:relative;
+    z-index:5;
+    max-width:800px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:90px;
+    color:#d4af37;
+    letter-spacing:5px;
+}
+
+.hero h2{
+    margin-top:10px;
+    font-size:38px;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:18px;
+    line-height:1.8;
+    color:#ddd;
+}
+
+/* BUTTON */
+
+.watch-btn{
+    display:inline-block;
+    margin-top:35px;
+    background:#d4af37;
+    color:black;
+    padding:16px 40px;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.35s;
+}
+
+.watch-btn:hover{
+    transform:translateY(-4px);
+    background:white;
+    box-shadow:0 0 25px #d4af37;
+}
+
+/* ===========================
+GENERAL SECTIONS
+=========================== */
+
+section{
+    padding:100px 8%;
+}
+
+section h2{
+    text-align:center;
+    color:#d4af37;
+    font-size:42px;
+    margin-bottom:45px;
+}
+
+/* ===========================
+ABOUT
+=========================== */
+
+#about p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+    color:#ddd;
+    line-height:2;
+}
+
+/* ===========================
+HOSTS
+=========================== */
+
+.hosts{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:#181818;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.35s;
+    text-align:center;
+    border:2px solid transparent;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#d4af37;
+    box-shadow:0 0 30px rgba(212,175,55,.45);
+}
+
+.card img{
+    width:100%;
+    height:340px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin-top:20px;
+    font-size:28px;
+}
+
+.card p{
+    margin:15px 0 30px;
+    color:#ccc;
+}
+
+/* ===========================
+EPISODES
+=========================== */
+
+.episodes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:35px;
+}
+
+.episode{
+    background:#181818;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.episode:hover{
+    transform:scale(1.04);
+    box-shadow:0 0 30px rgba(212,175,55,.5);
+}
+
+.episode img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.episode h3{
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+/* ===========================
+FOLLOW
+=========================== */
+
+.social{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.social a{
+    background:#d4af37;
+    color:black;
+    padding:18px 45px;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.social a:hover{
+    background:white;
+    transform:translateY(-5px);
+    box-shadow:0 0 25px #d4af37;
+}
+
+/* ===========================
+FOOTER
+=========================== */
+
+footer{
+    background:black;
+    text-align:center;
+    padding:60px 20px;
+}
+
+footer img{
+    width:90px;
+}
+
+footer h2{
+    color:#d4af37;
+    margin:20px 0 10px;
+}
+
+footer p{
+    color:#bbb;
+    margin:8px 0;
+}
+
+/* ===========================
+SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#d4af37;
+    border-radius:10px;
+}
+
+/* ===========================
+ANIMATION
+=========================== */
+
+.hero-content{
+    animation:fadeUp 1.4s ease;
+}
+
+@keyframes fadeUp{
+
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+nav{
+padding:15px 5%;
+flex-direction:column;
+}
+
+nav ul{
+margin-top:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+nav ul li{
+margin:10px;
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.hero h2{
+font-size:28px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+section h2{
+font-size:34px;
+}
+
+.card img{
+height:280px;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero h1{
+font-size:46px;
+}
+
+.hero h2{
+font-size:24px;
+}
+
+.watch-btn{
+padding:14px 28px;
+}
+
+.social{
+flex-direction:column;
+align-items:center;
+}
+
+.social a{
+width:230px;
+text-align:center;
+}
+
+}
